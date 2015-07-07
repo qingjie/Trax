@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool{
+        println("url = \(url)")
         let center = NSNotificationCenter.defaultCenter()
         let notification = NSNotification(name:GPXURL.Notification,object:self,userInfo:[GPXURL.Key:url])
         center.postNotification(notification)
